@@ -332,7 +332,7 @@ namespace PredmetniZadatak2
                         if (!podeoci[koordinate.Item1, koordinate.Item2].Zauzet)
                             podeoci[koordinate.Item1, koordinate.Item2].CvorID = 1;
                     }
-                }
+                } 
 
                 var prvi = aleksandar[0];
                 aleksandar = aleksandar.Skip(1).ToList();
