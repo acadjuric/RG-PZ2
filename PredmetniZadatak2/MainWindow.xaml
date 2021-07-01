@@ -1,0 +1,20 @@
+﻿<Window x:Class="PredmetniZadatak2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PredmetniZadatak2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="1010">
+    <DockPanel>
+        <Slider Name="slider" Margin="10" Width="900" Minimum="0.1" Maximum="10" Value="0.9" DockPanel.Dock="Top" ></Slider>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <Canvas Background="WhiteSmoke" Height="600" Width="1000" Name="kanvas">
+                <Canvas.LayoutTransform>
+                    <ScaleTransform ScaleX="{Binding Path=Value, ElementName=slider}" ScaleY="{Binding Path=Value, ElementName=slider}"  />
+                </Canvas.LayoutTransform>
+            </Canvas>
+        </ScrollViewer>
+    </DockPanel>
+    
+</Window>
